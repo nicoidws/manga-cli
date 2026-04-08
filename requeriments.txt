@@ -1,0 +1,4 @@
+curl
+chafa
+figlet
+file
