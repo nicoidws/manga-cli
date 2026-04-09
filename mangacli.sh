@@ -94,7 +94,10 @@ while true; do
     echo "[d] siguiente | [a] anterior | [q] salir"
     echo ""
 
-    chafa --size=120x60 --symbols=block --color-space=rgb "$CARPETA/${IMGS[$INDEX]}"
+    # chafa --size=584x825 --symbols=block --color-space=rgb "$CARPETA/${IMGS[$INDEX]}"
+    chafa --fit-width --symbols=block "$CARPETA/${IMGS[$INDEX]}"
+
+
 
     read -rsn1 key
 
