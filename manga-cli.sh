@@ -4,6 +4,8 @@ clear
 echo -e "\e[32m"
 figlet "MANGA-CLI"
 echo -e "\e[0m"
+echo "v1.0.0"
+echo "\n"
 echo "by an0mia"
 echo ""
 echo "📖 Reader iniciado..."
