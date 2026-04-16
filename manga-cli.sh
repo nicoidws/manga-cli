@@ -412,10 +412,13 @@ while true; do
     echo "[<] siguiente | [>] anterior | [q] salir"
     echo ""
 
+    
+    # Tamaño dinámico según terminal
     WIDTH=$(tput cols)
-    HEIGHT=$(tput lines)
+    HEIGHT=$(($(tput lines)-5))
 
-    chafa -s --size=$(tput cols)x$(tput lines) "$CARPETA/${IMGS[$INDEX]}"
+    # Mostrar imagen
+    chafa --size=${WIDTH}x${HEIGHT} "$CARPETA/${IMGS[$INDEX]}"
 
     read -rsn1 key
     if [[ $key == $'\x1b' ]]; then
