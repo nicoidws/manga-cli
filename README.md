@@ -1,3 +1,5 @@
+---
+
 🖥️ MANGA CLI
 
 «📖 Lector de manga en la terminal con descarga automática desde URLs de imágenes (nhentai) y visualización en ASCII usando "chafa".»
@@ -69,13 +71,13 @@ chmod +x manga_reader_url.sh
 
 📌 Ejemplo
 
-./manga_reader_url.sh "https://i1.nhentai.net/galleries/792106/1.jpg"
+./manga_reader_url.sh "<https://i1.nhentai.net/galleries/792106/1.jpg>"
 
 ---
 
 🔢 Con límite
 
-./manga_reader_url.sh "https://i1.nhentai.net/galleries/792106/1.jpg" 10
+./manga_reader_url.sh "<https://i1.nhentai.net/galleries/792106/1.jpg>" 10
 
 ---
 
@@ -102,7 +104,7 @@ Tecla| Acción
 
 - Debes usar una URL directa de imagen, por ejemplo:
 
-https://i1.nhentai.net/galleries/XXXXXX/1.jpg
+<https://i1.nhentai.net/galleries/XXXXXX/1.jpg>
 
 - No usar URLs incompletas o sin "https"
 
