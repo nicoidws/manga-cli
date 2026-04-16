@@ -1,4 +1,6 @@
-curl
-chafa
-figlet
-file
+# Dependencias necesarias para manga-cli
+
+curl      # Descarga de contenido web
+chafa     # Renderizado de imágenes en terminal
+figlet    # Banner ASCII
+file      # Detección de tipo de archivo
