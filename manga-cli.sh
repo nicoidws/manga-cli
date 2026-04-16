@@ -412,13 +412,7 @@ while true; do
     echo "[<] siguiente | [>] anterior | [q] salir"
     echo ""
 
-    
-    # Tamaño dinámico según terminal
-    WIDTH=$(tput cols)
-    HEIGHT=$(($(tput lines)-5))
-
     # Mostrar imagen
-    # chafa --size=${WIDTH}x${HEIGHT}
     chafa --fit-width --symbols=block "$CARPETA/${IMGS[$INDEX]}"
 
     read -rsn1 key
