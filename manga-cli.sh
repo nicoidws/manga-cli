@@ -418,7 +418,8 @@ while true; do
     HEIGHT=$(($(tput lines)-5))
 
     # Mostrar imagen
-    chafa -s $(tput cols)x$(tput lines) --dither ordered "$CARPETA/${IMGS[$INDEX]}"
+    # chafa --size=${WIDTH}x${HEIGHT}
+    chafa --fit-width --symbols=block "$CARPETA/${IMGS[$INDEX]}"
 
     read -rsn1 key
     if [[ $key == $'\x1b' ]]; then
