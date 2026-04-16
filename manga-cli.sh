@@ -415,7 +415,7 @@ while true; do
     WIDTH=$(tput cols)
     HEIGHT=$(tput lines)
 
-    chafa -s ${WIDTH}x$((HEIGHT-5)) "$CARPETA/${IMGS[$INDEX]}"
+    chafa -s --size=$(tput cols)x$(tput lines) "$CARPETA/${IMGS[$INDEX]}"
 
     read -rsn1 key
     if [[ $key == $'\x1b' ]]; then
