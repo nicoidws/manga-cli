@@ -415,7 +415,17 @@ while true; do
     echo ""
 
     # Mostrar imagen
-    chafa --fit-width --symbols=block "$CARPETA/${IMGS[$INDEX]}"
+    # Detectar si chafa soporta --fix-width
+    if chafa --help 2>&1 | grep -q -- "--fix-width"; then
+        echo "Usando --fix-width (Termux custom)"
+        chafa --fit-width --symbols=block "$CARPETA/${IMGS[$INDEX]}"
+        # chafa --fix-width --symbols full --dither ordered "$img"
+
+    else
+        echo "Usando fallback --size"
+        chafa --symbols full --dither ordered --size=$(tput cols)x "$CARPETA/${IMGS[$INDEX]}"
+    fi
+    
 
     read -rsn1 key
     if [[ $key == $'\x1b' ]]; then
