@@ -423,7 +423,7 @@ while true; do
 
     else
         echo "Usando fallback --size"
-        chafa --symbols full --dither ordered --size=$(tput cols)x "$CARPETA/${IMGS[$INDEX]}"
+        chafa --dither ordered --size=$(tput cols)x "$CARPETA/${IMGS[$INDEX]}"
     fi
     
 
