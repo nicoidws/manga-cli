@@ -421,7 +421,7 @@ while true; do
 
     else
         echo "Usando fallback --size"
-        chafa --dither ordered --size=$(tput cols)x "$CARPETA/${IMGS[$INDEX]}"
+        chafa --dither ordered --scale max  "$CARPETA/${IMGS[$INDEX]}"
     fi
     
 

@@ -1,0 +1,1 @@
+./manga-cli "https://i2.nhentai.net/galleries/3892790/1.webp" 10
