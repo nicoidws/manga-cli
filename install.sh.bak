@@ -1,23 +1,5 @@
 #!/bin/bash
 
-echo "📦 Instalando manga-cli..."
-
-# Nombre del script principal
-SCRIPT_NAME="manga-cli.sh"
-INSTALL_PATH="/usr/local/bin/manga-cli"
-
-# Verificar que el script existe
-if [ ! -f "$SCRIPT_NAME" ]; then
-    echo "❌ No se encontró $SCRIPT_NAME en este directorio"
-    exit 1
-fi
-
-# Copiar como comando global
-sudo cp "$SCRIPT_NAME" "$INSTALL_PATH"
-sudo chmod +x "$INSTALL_PATH"
-
-echo "✅ Comando instalado en $INSTALL_PATH"
-
 echo "🔧 Instalando dependencias..."
 
 DEPS=(curl chafa figlet file)
@@ -59,16 +41,19 @@ elif command -v dnf >/dev/null; then
 
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     echo "🍎 macOS"
-    echo "👉 Instala con: brew install curl chafa figlet"
+    echo "👉 Instala con: brew install curl chafa figlet file-formula"
 
 elif [[ "$OSTYPE" == "msys"* || "$OSTYPE" == "win32" ]]; then
     echo "🪟 Windows detectado"
-    echo "Instala manualmente las dependencias"
+    echo "Instala manualmente:"
+    echo "1. Git Bash"
+    echo "2. chafa → https://hpjansson.org/chafa/"
+    echo "3. curl (ya viene en Git Bash)"
+    echo "4. figlet"
+    echo "5. file (opcional)"
 
 else
     echo "❌ Sistema no soportado automáticamente"
 fi
 
-echo ""
-echo "🚀 Instalación completa!"
-echo "👉 Usa: manga-cli <url>"
+echo "✅ Instalación finalizada"
