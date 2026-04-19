@@ -421,7 +421,8 @@ while true; do
 
     else
         echo "Usando fallback --size"
-        chafa --dither ordered --scale max  "$CARPETA/${IMGS[$INDEX]}"
+        # chafa --dither ordered --scale  "$CARPETA/${IMGS[$INDEX]}"
+	chafa --dither ordered "$CARPETA/${IMGS[$INDEX]}"
     fi
     
 
